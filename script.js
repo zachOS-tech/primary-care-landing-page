@@ -158,7 +158,6 @@ geojson.features.forEach(function(marker) {
 
 map.on('click', function(e) {
     if (!(e.originalEvent.target.classList.contains('maplibregl-canvas'))) {
-        console.log('clicked marker');
         map.flyTo({
             center: [e.lngLat.lng, e.lngLat.lat - 10],
             zoom: 4
