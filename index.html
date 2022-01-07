@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary Care Campaign</title>
+    <script src="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#">
+            <img src="assets/logo.jpg" alt="Logo" class="nav-logo">
+        </a>
+    </div>
+    <div class="hero">
+        <div class="hero-content">
+            <img src="assets/Destination-Health-Logo-(white).png" alt="Destination Health" class="dest-health-logo">
+            <div class="subtitle-container">
+                <h1 class="subtitle">Welcome to the first step on your healthy journey.</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main">
+            <div class="main-content">
+                <h2>Now you can see a physician tomorrow.</h2>
+                <p>
+                    When you choose a Hospital Healthcare System primary care provider, you're choosing a provider who is part of this region's destination for advanced care. This relationship can put you on a better path to better physical and mental health, providing:
+                </p>
+                <ul class="facts">
+                    <li>Expert physicians, who are highly trained and selected for thier skill and compassion.</li>
+                    <li>Access to preventive care to keep you as healthy as possible.</li>
+                    <li>Management and treatment for your medical issues and an understanding of your risks based on you and your family history.
+                    </li>
+                    <li>Advanced diagnostic and testing capabilities in the comfort and convenience of your own doctor's office.
+                    </li>
+                </ul>
+
+            </div>
+            <div class="CTA">
+                <img src="assets/Inset-Photo.jpg" alt="" class="desktop-only" />
+                <a href="tel:219-555-5555" class="schedule">
+                    <h3>Call (219) 555-5555</h3>
+                    <p>to schedule an appointment.</p>
+                </a>
+            </div>
+        </div>
+        <div class="map-container desktop-only">
+            <h3>Choose one of the following for a priority appointment.</h3>
+            <h4>Click on the map pins below to make an appointment online.</h4>
+            <div id="map"></div>
+        </div>
+        <div class="hidden-desktop">
+            <h3>Or set up an appointment with a physician online</h3>
+            <h4>Choose one of the following for a priority appointment</h4>
+            <div class="physicians-container">
+                <div class="physician-card">
+                    <img src="assets/profile.png" alt="Physician" class="physician-image" width="80%" height="auto">
+                    <p><strong>Doctor, DO</strong></p>
+                    <p>Indiana</p>
+                    <br>
+                    <div class="physician-cta">
+                        <a href="#">
+                            Learn More<br>About This Provider
+                        </a>
+                    </div>
+                </div>
+                <div class="physician-card">
+                    <img src="assets/profile.png" alt="Physician" class="physician-image" width="80%" height="auto">
+                    <p><strong>Doctor, DO</strong></p>
+                    <p>Arizona</p>
+                    <br>
+                    <div class="physician-cta">
+                        <a href="#">
+                            Learn More<br>About This Provider
+                        </a>
+                    </div>
+                </div>
+                <div class="physician-card">
+                    <img src="assets/profile.png" alt="Physician" class="physician-image" width="80%" height="auto">
+                    <p><strong>Doctor, DO</strong></p>
+                    <p>Colorado</p>
+                    <br>
+                    <div class="physician-cta">
+                        <a href="#">
+                            Learn More<br>About This Provider
+                        </a>
+                    </div>
+                </div>
+                <div class="physician-card">
+                    <img src="assets/profile.png" alt="Physician" class="physician-image" width="80%" height="auto">
+                    <p><strong>Doctor, DO</strong></p>
+                    <p>West Virginia</p>
+                    <br>
+                    <div class="physician-cta">
+                        <a href="#">
+                            Learn More<br>About This Provider
+                        </a>
+                    </div>
+                </div>
+                <div class="physician-card">
+                    <img src="assets/profile.png" alt="Physician" class="physician-image" width="80%" height="auto">
+                    <p><strong>Doctor, DO</strong></p>
+                    <p>Nevada</p>
+                    <br>
+                    <div class="physician-cta">
+                        <a href="#">
+                            Learn More<br>About This Provider
+                        </a>
+                    </div>
+                </div>
+                <div class="physician-card">
+                    <img src="assets/profile.png" alt="Physician" class="physician-image" width="80%" height="auto">
+                    <p><strong>Doctor, DO</strong></p>
+                    <p>Arkansas</p>
+                    <p>Tennessee</p>
+                    <div class="physician-cta">
+                        <a href="#">
+                            Learn More<br>About This Provider
+                        </a>
+                    </div>
+                </div>
+                <div class="physician-card">
+                    <img src="assets/profile.png" alt="Physician" class="physician-image" width="80%" height="auto">
+                    <p><strong>Doctor, DO</strong></p>
+                    <p>Montana</p>
+                    <br>
+                    <div class="physician-cta">
+                        <a href="#">
+                            Learn More<br>About This Provider
+                        </a>
+                    </div>
+                </div>
+                <div class="physician-card">
+                    <img src="assets/profile.png" alt="Physician" class="physician-image" width="80%" height="auto">
+                    <p><strong>Doctor, DO</strong></p>
+                    <p>South Dakota</p>
+                    <br>
+                    <div class="physician-cta">
+                        <a href="#">
+                            Learn More<br>About This Provider
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h3>About Hospital Healthcare System</h3>
+            <p>Hospital Healthcare System is comprised of four not-for-profit hospitals and a continuing care retirement community. Our Hospital Care Network of physicians located throughout the area provides a broad range of expertise from family practice,
+                internal medicine, OB/GYN, and a specialized variety of practices. Combining advanced technology with the latest diagnostics and therapeutic procedures, clinical research, and a network of highly qualified physicians, nurses and allied
+                health professionals, Hospital Healthcare System is your destination for exceptional care at every stage of life.
+            </p>
+            <p>To visit the Hospital Healthcare System homepage, <a href="#">Click
+                    Here</a></p>
+        </footer>
+        <script src="script.js"></script>
+</body>
+
+</html>
