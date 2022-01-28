@@ -31,7 +31,6 @@ body {
 
 h1.subtitle {
     color: white;
-    font-size: 42pt;
     font-size: 5.6em;
     line-height: 1;
     width: 700px;
@@ -46,7 +45,6 @@ div.subtitle-container {
 
 h2 {
     color: #721e41;
-    font-size: 28pt;
     font-size: 4em;
     line-height: 1;
     padding: 10px 0 10px 0;
@@ -57,7 +55,6 @@ h2 {
 h3 {
     font-weight: 700;
     color: #721e41;
-    font-size: 20pt;
     font-size: 3.6em;
     line-height: 1;
     padding: 0px;
@@ -68,20 +65,17 @@ h3 {
 h4 {
     color: #FFF;
     background-color: #636363;
-    font-size: 16pt;
     font-size: 3.2em;
     font-weight: 500;
     line-height: 1;
     padding: 5px 0 5px 0;
     margin: 0px;
-    width: 80%;
     text-align: center;
     width: 100%;
 }
 
 p {
     color: #000;
-    font-size: 14pt;
     font-size: 2.2em;
     font-weight: 300;
     line-height: 1.3;
@@ -91,7 +85,6 @@ p {
 
 ul.facts {
     list-style-image: url('assets/Chevron-Bullet.png');
-    font-size: 14pt;
     font-size: 2.2em;
     font-weight: 300;
 }
@@ -149,17 +142,6 @@ a {
     position: relative;
 }
 
-.hero-image {
-    object-position: center;
-    object-fit: none;
-    width: 100%;
-    height: 80vh;
-    position: relative;
-    z-index: -1;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-
 .hero-content {
     background: linear-gradient(#FFFFEEAB 15%, #FFFFEE90 20%, #FFFFEE10 45%, #FFFFEE10 60%, #000000AB 100%);
     width: 100%;
@@ -202,6 +184,7 @@ a {
     justify-content: center;
     align-items: center;
     padding: 30px;
+    z-index: 10;
 }
 
 .CTA>img {
@@ -218,8 +201,8 @@ a {
 }
 
 .CTA>a.schedule>h3 {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 .CTA>a.schedule>p {
@@ -227,7 +210,6 @@ a {
     font-size: 2.5em;
     text-align: center;
 }
-
 /* MAP */
 
 .map-container {
@@ -249,11 +231,7 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    padding: 0;
-}
-
-.marker-image {
-    border-radius: 50%;
+    padding: 0px;
 }
 
 .mapboxgl-popup {
@@ -342,7 +320,6 @@ h5 {
     font-size: 20px;
     text-align: center;
 }
-
 /* MAP END */
 
 .physicians-container {
@@ -372,10 +349,6 @@ h5 {
     align-items: center;
 }
 
-.physician-card > img {
-    border-radius: 50%;
-}
-
 .physician-card>div {
     display: flex;
     flex-direction: row;
@@ -395,13 +368,207 @@ h5 {
     font-size: 14px;
     text-align: center;
 }
+/* MODAL */
 
+.modal {
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    max-width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal.closed {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay.closed {
+    display: none;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.modal-close-button {
+    width: 100%;
+    z-index: 100;
+    margin-top: -20px;
+    margin-right: -10px
+}
+
+.close {
+    padding: 3px;
+}
+
+.modal-bio {
+    width: 100%;
+    margin-top: -20px;
+}
+
+.modal-header {
+    width: 100%;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.modal-header h2 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+.modal-body {
+    display: grid;
+    margin: 0;
+    width: 100%;
+}
+
+.modal-body form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.modal-body form div {
+    position: relative;
+}
+
+.modal-body form div label {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+    font-size: 14px;
+}
+
+.modal-body form div label.always-show {
+    top: -20px;
+    color: #acabab;
+    font-weight: 700;
+    font-size: 14px;
+}
+/* Chrome, Safari, Edge, Opera */
+
+.modal-body input::-webkit-outer-spin-button,
+.modal-body input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+
+.modal-body input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.modal-body input:not(:placeholder-shown)~label {
+    top: -20px;
+    color: red;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.modal-body input:focus:not(:placeholder-shown)~label.error {
+    color: transparent;
+    transition: 0s;
+    top: 20px;
+    left: 10px;
+}
+
+.modal-body input:not(:placeholder-shown)~label.error {
+    color: red;
+    left: 100px;
+    top: 10px;
+}
+
+.modal-body input:focus~label,
+.modal-body input:valid~label {
+    top: -20px;
+    color: #acabab;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.modal-body input {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background: #F0F0F0;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    border-bottom: solid 2px transparent;
+}
+
+.modal-body input:focus,
+.modal-body input:valid {
+    border-bottom: 2px solid #acabab;
+}
+
+.modal-body form input[type="submit"] {
+    cursor: pointer;
+    grid-column: span 2;
+    background: #721E41;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    margin: 0;
+}
+
+.modal-body form input[type="submit"]:hover {
+    background: #631a38;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 /* FOOTER */
 
 footer {
     padding-bottom: 50px;
 }
-
 /* UTILITY CLASSES */
 
 .mobile-only {
@@ -417,7 +584,6 @@ footer {
     visibility: hidden;
     display: none;
 }
-
 /* MEDIA QUERIES */
 /* laptop */
 
@@ -425,124 +591,117 @@ footer {
     .nav-logo {
         margin: 0 auto;
     }
-
     .hero {
         background-position: 80%;
         height: 50vh;
     }
-
     .desktop-only {
         visibility: hidden;
         display: none;
     }
-
     .main {
         grid-template-columns: 1fr;
     }
-
     .CTA {
         padding: 0;
     }
 }
-
 /* tablet */
 
 @media (max-width: 900px) {
     h1.subtitle {
         width: 70%;
     }
-
     div.subtitle-container {
         width: 100%;
         padding-left: 20%;
     }
-
     .nav {
         height: 60px;
     }
-
     .nav-logo {
         height: 50px;
     }
-
     .container {
         width: 80%;
     }
-
+    .modal-content {
+        width: 80%;
+    }
     .dest-health-logo {
         width: 100%;
         max-width: 80%;
     }
-
     .hidden-desktop {
         visibility: visible;
         display: block;
     }
 }
-
 /* mobile */
 
 @media (max-width: 450px) {
     .nav {
         height: 50px;
     }
-
     .nav-logo {
         height: 40px;
     }
-
     h1.subtitle {
         width: 100%;
         font-size: 4.5em;
         margin-bottom: 10px;
     }
-
     div.subtitle-container {
         width: 100%;
         padding-left: 0%;
         text-align: center;
     }
-
     .hero {
         background-position: 72%;
         height: 39vh;
     }
-
     .dest-health-logo {
         width: 100%;
         max-width: 90%;
         padding-top: 10px;
     }
-
     .container {
         width: 90%;
     }
-
     .physicians-container {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .physician-card>p {
         font-size: 18px;
     }
-
     .physician-card>p>strong {
         font-size: 18px;
     }
-
     .physician-card {
         padding: 20px 0 20px 0;
     }
-
+    .modal-content {
+        width: 80%;
+    }
+    .modal-body form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .modal-body form input[type="submit"] {
+        grid-column: span 1;
+    }
+    .modal-body input {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
     .hidden-mobile {
         visibility: hidden;
         display: none;
     }
-
     .mobile-only {
         visibility: visible;
         display: block;
     }
 }
-
 /* MEDIA QUERIES END */

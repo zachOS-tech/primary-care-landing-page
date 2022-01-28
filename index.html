@@ -70,8 +70,7 @@
                     <p>Indiana</p>
                     <br>
                     <div class="physician-cta">
-                        <a href="#">
-                            Learn More<br>About This Provider
+                        <a href="javascript:void(0);" data-providerID="IN1234" onclick="modalOpenWithBio(event)" Learn More<br>About This Provider
                         </a>
                     </div>
                 </div>
@@ -81,8 +80,7 @@
                     <p>Arizona</p>
                     <br>
                     <div class="physician-cta">
-                        <a href="#">
-                            Learn More<br>About This Provider
+                        <a href="javascript:void(0);" data-providerID="AZ1234" onclick="modalOpenWithBio(event)" Learn More<br>About This Provider
                         </a>
                     </div>
                 </div>
@@ -92,8 +90,7 @@
                     <p>Colorado</p>
                     <br>
                     <div class="physician-cta">
-                        <a href="#">
-                            Learn More<br>About This Provider
+                        <a href="javascript:void(0);" data-providerID="CO1234" onclick="modalOpenWithBio(event)" Learn More<br>About This Provider
                         </a>
                     </div>
                 </div>
@@ -103,8 +100,7 @@
                     <p>West Virginia</p>
                     <br>
                     <div class="physician-cta">
-                        <a href="#">
-                            Learn More<br>About This Provider
+                        <a href="javascript:void(0);" data-providerID="WV1234" onclick="modalOpenWithBio(event)" Learn More<br>About This Provider
                         </a>
                     </div>
                 </div>
@@ -114,8 +110,7 @@
                     <p>Nevada</p>
                     <br>
                     <div class="physician-cta">
-                        <a href="#">
-                            Learn More<br>About This Provider
+                        <a href="javascript:void(0);" data-providerID="NV1234" onclick="modalOpenWithBio(event)" Learn More<br>About This Provider
                         </a>
                     </div>
                 </div>
@@ -125,8 +120,7 @@
                     <p>Arkansas</p>
                     <p>Tennessee</p>
                     <div class="physician-cta">
-                        <a href="#">
-                            Learn More<br>About This Provider
+                        <a href="javascript:void(0);" data-providerID="AR1234" onclick="modalOpenWithBio(event)" Learn More<br>About This Provider
                         </a>
                     </div>
                 </div>
@@ -136,8 +130,7 @@
                     <p>Montana</p>
                     <br>
                     <div class="physician-cta">
-                        <a href="#">
-                            Learn More<br>About This Provider
+                        <a href="javascript:void(0);" data-providerID="MT1234" onclick="modalOpenWithBio(event)" Learn More<br>About This Provider
                         </a>
                     </div>
                 </div>
@@ -147,12 +140,56 @@
                     <p>South Dakota</p>
                     <br>
                     <div class="physician-cta">
-                        <a href="#">
-                            Learn More<br>About This Provider
+                        <a href="javascript:void(0);" data-providerID="SD1234" onclick="modalOpenWithBio(event)" Learn More<br>About This Provider
                         </a>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="modal closed">
+            <div class="modal-content">
+                <div class="modal-close-button">
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-bio"></div>
+                <div class="modal-header">
+                    <h2>Schedule a Priority Appointment</h2>
+                </div>
+                <div class="modal-body">
+                    <iframe name="form-submission" id="form-submission" style="display: none;"></iframe>
+                    <form id="MED_PrimaryCare_FY22_WebForm" method="post" target="form-submission">
+                        <div>
+                            <input type="text" id="Patient.FirstName" name="Patient.FirstName" value="" placeholder=" " required="" /><br />
+                            <label id="Patient.FirstName_label" for="Patient.FirstName">First
+                                Name</label>
+                        </div>
+                        <div>
+                            <input type="text" id="Patient.LastName" name="Patient.LastName" value="" placeholder=" " required="" /><br />
+                            <label id="Patient.LastName_label" for="Patient.LastName">Last Name</label>
+                        </div>
+                        <div>
+                            <input type="text" id="Patient.HC4__BirthdateEnc__c" name="Patient.HC4__BirthdateEnc__c" value="" placeholder="mm/dd/yyyy" required="" /><br />
+                            <label class="always-show" id="Patient.HC4__BirthdateEnc__c_label" for="Patient.HC4__BirthdateEnc__c">Birthdate</label>
+                        </div>
+                        <div>
+                            <input type="text" id="Patient.Email" name="Patient.Email" value="" placeholder=" " required="" /><br />
+                            <label id="Patient.Email_label" for="Patient.Email">Email</label>
+                        </div>
+                        <div>
+                            <input type="tel" id="Patient.Phone" name="Patient.Phone" value="" placeholder=" " required="" /><br />
+                            <label id="Patient.Phone_label" for="Patient.Phone">Phone</label>
+                        </div>
+                        <div>
+                            <input type="number" id="Patient.PostalCode" name="Patient.PostalCode" value="" placeholder=" " required="" /><br />
+                            <label id="Patient.PostalCode_label" for="Patient.PostalCode">Mailing
+                                Zip/Postal Code</label>
+                        </div>
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class=" modal-overlay closed">
         </div>
         <footer>
             <h3>About Hospital Healthcare System</h3>
@@ -163,7 +200,8 @@
             <p>To visit the Hospital Healthcare System homepage, <a href="#">Click
                     Here</a></p>
         </footer>
-        <script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
