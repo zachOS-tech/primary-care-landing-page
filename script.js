@@ -134,7 +134,7 @@ var geojson = {
 
 var map = new maplibregl.Map({
     container: 'map',
-    style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+    style: 'https://api.maptiler.com/maps/streets/style.json?key=94k8gIerU8Sh1R2WyXUR',
     center: MAP_CENTER,
     zoom: 4
 });
